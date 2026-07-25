@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>☕ Приглашение</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#FFE4C4,#FFD6E7);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.card{
+width:100%;
+max-width:420px;
+background:white;
+padding:30px;
+border-radius:30px;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+text-align:center;
+}
+
+.cats{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-bottom:20px;
+}
+
+.cats img{
+width:90px;
+}
+
+h1{
+color:#444;
+margin-bottom:15px;
+}
+
+p{
+color:#666;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+label{
+display:block;
+text-align:left;
+font-weight:600;
+margin-top:15px;
+margin-bottom:6px;
+}
+
+input,select{
+width:100%;
+padding:14px;
+border-radius:14px;
+border:none;
+background:#f3f3f3;
+font-size:16px;
+}
+
+button{
+margin-top:25px;
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+background:#FFB347;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+#result{
+margin-top:20px;
+font-size:18px;
+font-weight:600;
+}
+
+</style> </head>
+
+<body>
+
+<div class="card">
+
+<div class="cats">
+<img src="https://media.tenor.com/G4fGfK0M0XIAAAAi/cat-clap.gif">
+<img src="https://media.tenor.com/G4fGfK0M0XIAAAAi/cat-clap.gif">
+</div>
+
+<h1>☕ Есть предложение</h1>
+
+<p>
+Привет 😊<br><br>
+
+Я хочу пригласить тебя выпить кофе.
+
+Если тебе нравится эта идея — выбери удобную дату и время.
+</p>
+
+<label>📅 Дата</label>
+<input type="date" id="date">
+
+<label>🕒 Время</label>
+
+<select id="time">
+
+<option>09:00</option>
+<option>10:00</option>
+<option>11:00</option>
+<option>12:00</option>
+<option>13:00</option>
+<option>14:00</option>
+<option>15:00</option>
+<option>16:00</option>
+<option selected>17:00</option>
+<option>18:00</option>
+<option>19:00</option>
+<option>20:00</option>
+
+</select>
+
+<button onclick="sendForm()">
+Подтвердить ☕
+</button>
+
+<div id="result"></div>
+
+<script>
+
+function sendForm(){
+
+const date=document.getElementById("date").value;
+const time=document.getElementById("time").value;
+
+if(date==""){
+alert("Выбери дату 😊");
+return;
+}
+
+document.getElementById("result").innerHTML=
+"🐱 Отлично! Теперь осталось только дождаться кофе ☕";
+
+}
+
+</script>
+
+</div>
+
+</body>
+
+</html>
